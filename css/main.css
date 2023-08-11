@@ -1,0 +1,121 @@
+/* start general */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+/* start variables */
+:root {
+    --main-color: #19c8fa;}
+/* end variables */
+html {
+    scroll-behavior: smooth;
+}
+body{
+    
+    background-color: rgb(85, 90, 90);
+    font-family: "Open Sans" , sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container{
+    
+    margin-right:  auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+   
+   }
+/* Small */
+@media (min-width: 768px) {
+   .container {
+     width: 750px;
+   }
+ }
+ /* Medium */
+ @media (min-width: 992px) {
+   .container {
+     width: 970px;
+   }
+ }
+ /* Large */
+ @media (min-width: 1200px) {
+   .container {
+     width: 1170px;
+   }
+}      
+
+/* end general */
+/* start heading */
+.heading {
+
+}
+.heading .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* note the line must start without any padding */
+    /* border-bottom: solid 1px black; */ 
+    /* another approach is peusodo elements after*/
+}
+.heading .container ::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    background-color: black;
+    height: 1px;
+    bottom: 0;
+    left: 15px;
+}
+.heading .logo img {
+    height: 40px;
+}
+.heading .container .links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+}
+.heading .container .links ul {
+    display: flex;
+}
+.heading .container .links ul li a {
+    padding:40px 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    z-index: 3;
+}
+.heading .container .links ul li a.active,
+.heading .container .links ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.heading .container .links .form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 40px;
+    border-left: solid 1px white;
+}
+.heading .container .links .form i {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0; 
+}
+/* end heading */
